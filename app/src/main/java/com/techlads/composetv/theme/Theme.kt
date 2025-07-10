@@ -2,11 +2,16 @@
 
 package com.techlads.composetv.theme
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.tv.material3.ExperimentalTvMaterial3Api
@@ -14,6 +19,7 @@ import androidx.tv.material3.LocalContentColor
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.darkColorScheme
 import androidx.tv.material3.lightColorScheme
+import com.techlads.composetv.R
 import md_theme_dark_background
 import md_theme_dark_error
 import md_theme_dark_errorContainer
@@ -116,7 +122,7 @@ private val DarkColors = darkColorScheme(
     errorContainer = md_theme_dark_errorContainer,
     onError = md_theme_dark_onError,
     onErrorContainer = md_theme_dark_onErrorContainer,
-    background = md_theme_dark_background,
+    background = Color.Transparent,
     onBackground = md_theme_dark_onBackground,
     surface = md_theme_dark_surface,
     onSurface = md_theme_dark_onSurface,
@@ -146,9 +152,19 @@ fun ComposeTvTheme(
         shapes = Shapes,
         content = {
             CompositionLocalProvider(LocalContentColor provides colors.onSurface) {
-                Box(modifier = Modifier.semantics {
-                    testTagsAsResourceId = true
-                }) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .semantics { testTagsAsResourceId = true }
+                ) {
+                    // Add background image
+                    Image(
+                        painter = painterResource(id = R.drawable.background),
+                        contentDescription = null,
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                    // Render the rest of the app's content
                     content()
                 }
             }

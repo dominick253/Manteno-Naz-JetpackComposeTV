@@ -117,7 +117,7 @@ fun BannerImage(modifier: Modifier) {
             .testTag(PRODUCT_DETAIL_BANNER_TAG)
             .fillMaxSize()
             .height(200.dp),
-        painter = painterResource(id = R.drawable.hero_item),
+        painter = painterResource(id = R.drawable.background),
         contentDescription = "Hero item background",
         contentScale = ContentScale.Crop,
     )

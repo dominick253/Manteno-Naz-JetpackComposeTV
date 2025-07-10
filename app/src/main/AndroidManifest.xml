@@ -14,7 +14,7 @@
     <application
         android:name=".MainApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_app"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeTV">
@@ -27,8 +27,8 @@
             android:name=".MainActivity"
             android:banner="@drawable/ic_app"
             android:exported="true"
-            android:icon="@drawable/ic_app"
-            android:logo="@drawable/ic_app"
+            android:icon="@drawable/logo"
+            android:logo="@drawable/logo"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
