@@ -69,7 +69,7 @@ fun AppNavigation(navController: NavHostController, homeViewModel: HomeViewModel
             Screens.Player.title,
         ) {
             PlayerScreen(
-                "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+                "https://resi.media/fds-bmn-ww/6e86bae7-01f4-4d94-8ca4-b7df69d56683/Manifest.m3u8",
                 onBackPressed = {
                     navController.navigateUp()
                 },

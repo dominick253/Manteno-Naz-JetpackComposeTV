@@ -111,6 +111,6 @@ fun PlayerScreenContent(modifier: Modifier, mediaUrl: String, onBackPressed: () 
 @Preview
 @Composable
 private fun PlayerScreenPreview() {
-    PlayerScreen("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4") {
+    PlayerScreen("https://resi.media/fds-bmn-ww/6e86bae7-01f4-4d94-8ca4-b7df69d56683/Manifest.m3u8") {
     }
 }

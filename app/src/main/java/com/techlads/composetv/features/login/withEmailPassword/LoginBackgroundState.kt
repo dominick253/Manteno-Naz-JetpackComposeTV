@@ -41,7 +41,8 @@ data class Movie(
     val title: String,
     val details: String,
     val imageUrl: String,
-    val metadata: String
+    val metadata: String,
+    val videoUrl: String? = null
 )
 
 
